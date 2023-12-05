@@ -40,6 +40,21 @@ const addDigitToDisplay = (number: number) => {
   updateDisplay();
 };
 
+// Calculate Pergentage
+const percentage = () => {
+  if (firstOperand !== "" && !isSecondOperand) {
+    const percentage = (
+      (parseFloat(firstOperand) * parseFloat(displayValue)) /
+      100
+    ).toString();
+    displayValue = percentage;
+    updateDisplay();
+  } else {
+    displayValue = (parseFloat(displayValue) / 100).toString();
+    updateDisplay();
+  }
+}
+
 // Add decimal point
 const addDecimal = () => {
   if (!displayValue.includes(".")) {
@@ -70,21 +85,26 @@ const clearLastDigit = () => {
   updateDisplay()
 }
 
+// Invert the number. 8/1 becomes 1/8 or 0.125
 const inverse = () => {
   displayValue = (1 / parseFloat(displayValue)).toString()
   updateDisplay()
 }
 
+// Multiply the number by itself
 const square = () => {
   displayValue = (parseFloat(displayValue) ** 2).toString()
   updateDisplay()
 }
 
+// Discover the number wich multiplied by hilself equals the selected number
 const squareRoot = () => {
   displayValue = Math.sqrt(parseFloat(displayValue)).toString();
   updateDisplay();
 };
 
-const calculatorController = { addDigitToDisplay, addDecimal, clearAll, clearEntry, clearLastDigit, inverse, square, squareRoot}
+
+
+const calculatorController = { addDigitToDisplay, addDecimal, clearAll, clearEntry, clearLastDigit, inverse, square, squareRoot, percentage}
 
 export default calculatorController

@@ -24,7 +24,7 @@ const App: React.FC = () => {
       <div className="buttons">
         {/* Row 1*/}
         <div className="button-row">
-          <Button label="%" onClick={() => {}} className="function" />
+          <Button label="%" onClick={() => { calculatorController.percentage()}} className="function" />
           <Button label="CE" onClick={() => { calculatorController.clearEntry() }} className="function" />
           <Button label="C" onClick={() => { calculatorController.clearAll() }} className="function" />
           <Button label="←" onClick={() => { calculatorController.clearLastDigit()}} className="function" />
