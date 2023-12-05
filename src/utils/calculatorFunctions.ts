@@ -48,6 +48,16 @@ const addDecimal = () => {
   updateDisplay();
 }
 
-const calculatorController = { addDigitToDisplay, addDecimal }
+
+// Clear all data
+const clearAll = () => {
+  let displayValue = "0";
+  let operator = "";
+  let firstOperand = "";
+  let isSecondOperand = false;
+  updateDisplay();
+};
+
+const calculatorController = { addDigitToDisplay, addDecimal, clearAll,  }
 
 export default calculatorController
