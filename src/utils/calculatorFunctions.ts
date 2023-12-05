@@ -58,6 +58,12 @@ const clearAll = () => {
   updateDisplay();
 };
 
-const calculatorController = { addDigitToDisplay, addDecimal, clearAll,  }
+// Clear last data entry
+const clearEntry = () => {
+  displayValue = '0'
+  updateDisplay()
+}
+
+const calculatorController = { addDigitToDisplay, addDecimal, clearAll, clearEntry }
 
 export default calculatorController
