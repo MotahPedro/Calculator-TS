@@ -75,7 +75,11 @@ const inverse = () => {
   updateDisplay()
 }
 
+const square = () => {
+  displayValue = (parseFloat(displayValue) ** 2).toString()
+  updateDisplay()
+}
 
-const calculatorController = { addDigitToDisplay, addDecimal, clearAll, clearEntry, clearLastDigit, inverse}
+const calculatorController = { addDigitToDisplay, addDecimal, clearAll, clearEntry, clearLastDigit, inverse, square}
 
 export default calculatorController
