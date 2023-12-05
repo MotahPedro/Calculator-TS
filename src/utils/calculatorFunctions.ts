@@ -70,6 +70,12 @@ const clearLastDigit = () => {
   updateDisplay()
 }
 
-const calculatorController = { addDigitToDisplay, addDecimal, clearAll, clearEntry, clearLastDigit}
+const inverse = () => {
+  displayValue = (1 / parseFloat(displayValue)).toString()
+  updateDisplay()
+}
+
+
+const calculatorController = { addDigitToDisplay, addDecimal, clearAll, clearEntry, clearLastDigit, inverse}
 
 export default calculatorController

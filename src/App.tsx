@@ -32,7 +32,7 @@ const App: React.FC = () => {
 
         {/* Row 2*/}
         <div className="button-row">
-          <Button label="1/x" onClick={() => {}} className="function" />
+          <Button label="1/x" onClick={() => { calculatorController.inverse}} className="function" />
           <Button label="X²" onClick={() => {}} className="function" />
           <Button label="√" onClick={() => {}} className="function" />
           <Button label="/" onClick={() => {}} className="operator" />
