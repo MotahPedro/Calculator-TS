@@ -64,6 +64,12 @@ const clearEntry = () => {
   updateDisplay()
 }
 
-const calculatorController = { addDigitToDisplay, addDecimal, clearAll, clearEntry }
+// Clear last digit
+const clearLastDigit = () => {
+  displayValue = (displayValue.length === 1) ? '0' : displayValue.slice(0,-1)
+  updateDisplay()
+}
+
+const calculatorController = { addDigitToDisplay, addDecimal, clearAll, clearEntry, clearLastDigit}
 
 export default calculatorController
