@@ -5,6 +5,12 @@
   text-align: center;
 }
 
+body{
+    text-align: center;
+    background: linear-gradient(to bottom,rgb(46, 245, 39), rgb(255, 75, 75));
+    min-height: 100vh;
+}
+
 .calculator {
   display: grid;
   gap: 8px;
@@ -14,6 +20,7 @@
   border-radius: 8px;
   background-color: rgb(224, 224, 224);
   border: 1px solid #202020;
+  box-shadow: -5px 5px 0 #222, -10px 9px 0 hsl(0, 0%, 0%);
 }
 
 .display {
@@ -42,7 +49,12 @@
   cursor: pointer;
   border: 1px solid #555555;
   margin-left: 8px;
-  
+  box-shadow: -2px 3px 0 #222, -3px 5px 0 hsl(0, 0%, 0%);
+}
+
+.button:active {
+  box-shadow: inset -4px 4px 0 #222;
+  font-size: 16px;
 }
 
 .button-row {
@@ -64,11 +76,11 @@
 }
 
 .button.equal {
-  background-color: rgb(255, 153, 0);
+  background-color: rgb(46, 245, 39);
   border-radius: 8px;
 }
 
 .button.function {
-  background-color: rgb(18, 189, 219);
+  background-color: rgb(255, 75, 75);
   border-radius: 8px;
 }
