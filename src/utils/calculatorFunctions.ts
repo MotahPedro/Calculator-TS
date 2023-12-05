@@ -80,6 +80,11 @@ const square = () => {
   updateDisplay()
 }
 
-const calculatorController = { addDigitToDisplay, addDecimal, clearAll, clearEntry, clearLastDigit, inverse, square}
+const squareRoot = () => {
+  displayValue = Math.sqrt(parseFloat(displayValue)).toString();
+  updateDisplay();
+};
+
+const calculatorController = { addDigitToDisplay, addDecimal, clearAll, clearEntry, clearLastDigit, inverse, square, squareRoot}
 
 export default calculatorController
