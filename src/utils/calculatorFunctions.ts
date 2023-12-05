@@ -51,10 +51,10 @@ const addDecimal = () => {
 
 // Clear all data
 const clearAll = () => {
-  let displayValue = "0";
-  let operator = "";
-  let firstOperand = "";
-  let isSecondOperand = false;
+  displayValue = "0";
+  operator = "";
+  firstOperand = "";
+  isSecondOperand = false;
   updateDisplay();
 };
 

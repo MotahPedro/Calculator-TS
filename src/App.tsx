@@ -25,9 +25,9 @@ const App: React.FC = () => {
         {/* Row 1*/}
         <div className="button-row">
           <Button label="%" onClick={() => {}} className="function" />
-          <Button label="CE" onClick={() => { calculatorController.clearEntry }} className="function" />
-          <Button label="C" onClick={() => { calculatorController.clearAll }} className="function" />
-          <Button label="←" onClick={() => { calculatorController.clearLastDigit}} className="function" />
+          <Button label="CE" onClick={() => { calculatorController.clearEntry() }} className="function" />
+          <Button label="C" onClick={() => { calculatorController.clearAll() }} className="function" />
+          <Button label="←" onClick={() => { calculatorController.clearLastDigit()}} className="function" />
         </div>
 
         {/* Row 2*/}
@@ -70,7 +70,7 @@ const App: React.FC = () => {
         <div className="button-row">
           <Button label="+/-" onClick={() => {}} className="sign" />
           <Button label="0" onClick={() => {}} className="number" />
-          <Button label="." onClick={() => {calculatorController.addDecimal}} className="sign" />
+          <Button label="." onClick={() => {calculatorController.addDecimal()}} className="sign" />
           <Button label="=" onClick={() => {}} className="equal" />
         </div>
       </div>
