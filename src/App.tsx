@@ -1,19 +1,6 @@
 import React from 'react'
 import './App.css'
-
-// Display
-interface DisplayProps {
-  value: string
-}
-
-// Variáveis restantes
-type Operation = {
-  operator?: "+"|"-"|"*"|"/"|"%"|"."|"="
-}
-type Operands = {
-  firstOperand: string
-  secondOperand: string
-}
+import {addDigitToDisplay} from './utils/calculatorFunctions'
 
 // Button Component
 interface ButtonProps {
@@ -53,25 +40,29 @@ const App: React.FC = () => {
 
         {/* Row 3*/}
         <div className="button-row">
-          <Button label="7" onClick={() => {}} className="number" />
-          <Button label="8" onClick={() => {}} className="number" />
-          <Button label="9" onClick={() => {}} className="number" />
+          <Button
+            label="7"
+            onClick={() => { addDigitToDisplay(7) }}
+            className="number"
+          />
+          <Button label="8" onClick={() => { addDigitToDisplay(8) }} className="number" />
+          <Button label="9" onClick={() => { addDigitToDisplay(9) }} className="number" />
           <Button label="*" onClick={() => {}} className="operator" />
         </div>
 
         {/* Row 4*/}
         <div className="button-row">
-          <Button label="4" onClick={() => {}} className="number" />
-          <Button label="5" onClick={() => {}} className="number" />
-          <Button label="6" onClick={() => {}} className="number" />
+          <Button label="4" onClick={() => { addDigitToDisplay(4) }} className="number" />
+          <Button label="5" onClick={() => { addDigitToDisplay(5) }} className="number" />
+          <Button label="6" onClick={() => { addDigitToDisplay(6) }} className="number" />
           <Button label="-" onClick={() => {}} className="operator" />
         </div>
 
         {/* Row 5*/}
         <div className="button-row">
-          <Button label="1" onClick={() => {}} className="number" />
-          <Button label="2" onClick={() => {}} className="number" />
-          <Button label="3" onClick={() => {}} className="number" />
+          <Button label="1" onClick={() => { addDigitToDisplay(1) }} className="number" />
+          <Button label="2" onClick={() => { addDigitToDisplay(2) }} className="number" />
+          <Button label="3" onClick={() => { addDigitToDisplay(3) }} className="number" />
           <Button label="+" onClick={() => {}} className="operator" />
         </div>
 
