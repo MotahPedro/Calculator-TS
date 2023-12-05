@@ -18,7 +18,7 @@ let firstOperand = "";
 let isSecondOperand = false;
 
 // CUpdates Display
-export const updateDisplay = () => {
+const updateDisplay = () => {
   const displayElement = document.getElementsByClassName("display")[0];
   if (displayElement) {
     displayElement.textContent = displayValue;
@@ -28,7 +28,7 @@ export const updateDisplay = () => {
 };
 
 // Add a number to display
-export const addDigitToDisplay = (number: number) => {
+const addDigitToDisplay = (number: number) => {
   if (isSecondOperand) {
     displayValue = number.toString();
     isSecondOperand = false;
@@ -39,3 +39,15 @@ export const addDigitToDisplay = (number: number) => {
 
   updateDisplay();
 };
+
+// Add decimal point
+const addDecimal = () => {
+  if (!displayValue.includes(".")) {
+    displayValue += ".";
+  }
+  updateDisplay();
+}
+
+const calculatorController = { addDigitToDisplay, addDecimal }
+
+export default calculatorController

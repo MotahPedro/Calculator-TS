@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import {addDigitToDisplay} from './utils/calculatorFunctions'
+import calculatorController from './utils/calculatorFunctions'
 
 // Button Component
 interface ButtonProps {
@@ -42,27 +42,27 @@ const App: React.FC = () => {
         <div className="button-row">
           <Button
             label="7"
-            onClick={() => { addDigitToDisplay(7) }}
+            onClick={() => { calculatorController.addDigitToDisplay(7) }}
             className="number"
           />
-          <Button label="8" onClick={() => { addDigitToDisplay(8) }} className="number" />
-          <Button label="9" onClick={() => { addDigitToDisplay(9) }} className="number" />
+          <Button label="8" onClick={() => { calculatorController.addDigitToDisplay(8) }} className="number" />
+          <Button label="9" onClick={() => { calculatorController.addDigitToDisplay(9) }} className="number" />
           <Button label="*" onClick={() => {}} className="operator" />
         </div>
 
         {/* Row 4*/}
         <div className="button-row">
-          <Button label="4" onClick={() => { addDigitToDisplay(4) }} className="number" />
-          <Button label="5" onClick={() => { addDigitToDisplay(5) }} className="number" />
-          <Button label="6" onClick={() => { addDigitToDisplay(6) }} className="number" />
+          <Button label="4" onClick={() => { calculatorController.addDigitToDisplay(4) }} className="number" />
+          <Button label="5" onClick={() => { calculatorController.addDigitToDisplay(5) }} className="number" />
+          <Button label="6" onClick={() => { calculatorController.addDigitToDisplay(6) }} className="number" />
           <Button label="-" onClick={() => {}} className="operator" />
         </div>
 
         {/* Row 5*/}
         <div className="button-row">
-          <Button label="1" onClick={() => { addDigitToDisplay(1) }} className="number" />
-          <Button label="2" onClick={() => { addDigitToDisplay(2) }} className="number" />
-          <Button label="3" onClick={() => { addDigitToDisplay(3) }} className="number" />
+          <Button label="1" onClick={() => { calculatorController.addDigitToDisplay(1) }} className="number" />
+          <Button label="2" onClick={() => { calculatorController.addDigitToDisplay(2) }} className="number" />
+          <Button label="3" onClick={() => { calculatorController.addDigitToDisplay(3) }} className="number" />
           <Button label="+" onClick={() => {}} className="operator" />
         </div>
 
@@ -70,7 +70,7 @@ const App: React.FC = () => {
         <div className="button-row">
           <Button label="+/-" onClick={() => {}} className="sign" />
           <Button label="0" onClick={() => {}} className="number" />
-          <Button label="." onClick={() => {}} className="sign" />
+          <Button label="." onClick={() => {calculatorController.addDecimal}} className="sign" />
           <Button label="=" onClick={() => {}} className="equal" />
         </div>
       </div>
