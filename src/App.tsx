@@ -64,7 +64,7 @@ const App: React.FC = () => {
 
         {/* Row 6*/}
         <div className="button-row">
-          <Button label="+/-" onClick={() => {}} className="sign" />
+          <Button label="+/-" onClick={() => {calculatorController.toggleSign()}} className="sign" />
           <Button label="0" onClick={() => {calculatorController.addDigitToDisplay(0)}} className="number" />
           <Button label="." onClick={() => {calculatorController.addDecimal()}} className="sign" />
           <Button label="=" onClick={() => {calculatorController.calculate()}} className="equal" />

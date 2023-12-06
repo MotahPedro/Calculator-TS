@@ -89,6 +89,11 @@ const squareRoot = () => {
   updateDisplay();
 };
 
+const toggleSign = () => {
+  displayValue = (parseFloat(displayValue) * -1).toString();
+  updateDisplay();
+}
+
 const calculate = () => {
   const secondOperand = displayValue
   switch (operator) {
@@ -155,6 +160,6 @@ const divide = () => {
 }
 
 
-const calculatorController = { addDigitToDisplay, addDecimal, clearAll, clearEntry, clearLastDigit, inverse, square, squareRoot, percentage, add, subtract, multiply, divide, calculate}
+const calculatorController = { addDigitToDisplay, addDecimal, clearAll, clearEntry, clearLastDigit, inverse, square, squareRoot, percentage, add, subtract, multiply, divide, calculate, toggleSign}
 
 export default calculatorController
