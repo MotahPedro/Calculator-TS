@@ -1,17 +1,3 @@
-// // Display
-// interface DisplayProps {
-//     value: string
-// }
-
-// // Variáveis restantes
-// type Operation = {
-//     operator?: "+"|"-"|"*"|"/"|"%"|"."|"="
-// }
-// type Operands = {
-//     firstOperand: string
-//     secondOperand: string
-// }
-
 let displayValue = "0";
 let operator = "";
 let firstOperand = "";
@@ -103,8 +89,72 @@ const squareRoot = () => {
   updateDisplay();
 };
 
+const calculate = () => {
+  const secondOperand = displayValue
+  switch (operator) {
+    case '+':
+      displayValue = (
+        parseFloat(firstOperand) + parseFloat(secondOperand)
+      ).toString();
+      break;
+    case '-':
+      displayValue = (
+        parseFloat(firstOperand) - parseFloat(secondOperand)
+      ).toString();
+      break;
+    case '*':
+      displayValue = (
+        parseFloat(firstOperand) * parseFloat(secondOperand)
+      ).toString();
+      break;
+    case '/':
+      if (parseFloat(secondOperand) !== 0){
+        displayValue = (
+          parseFloat(firstOperand) / parseFloat(secondOperand)
+        ).toString();
+      } else {
+        displayValue = "Error"
+      }
+      break;
+
+    default:
+      break;
+  }
+  operator = "";
+  firstOperand = "";
+  isSecondOperand = false;
+  updateDisplay();
+}
+
+const Operator = (selectedOperator: string) => {
+  if (firstOperand === '') {
+    firstOperand = displayValue
+  } else {
+    calculate()
+  }
+  operator = selectedOperator
+  isSecondOperand = true
+  displayValue = '0'
+  updateDisplay()
+}
+
+const add = () => {
+  Operator("+");
+}
+
+const subtract = () => {
+  Operator("-");
+}
+
+const multiply = () => {
+  Operator("*");
+}
+
+const divide = () => {
+  Operator("/");
+}
 
 
-const calculatorController = { addDigitToDisplay, addDecimal, clearAll, clearEntry, clearLastDigit, inverse, square, squareRoot, percentage}
+const calculatorController = { addDigitToDisplay, addDecimal, clearAll, clearEntry, clearLastDigit, inverse, square, squareRoot, percentage, add, subtract, multiply, divide, calculate}
 
 export default calculatorController
